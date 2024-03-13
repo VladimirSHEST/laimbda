@@ -19,15 +19,10 @@ class Test{
         Collections.addAll(students, st1, st2, st3, st4);
 
         StudentInfo info = new StudentInfo();
-        info.testStudents(students, new StudentChecks() {
-            @Override
-            public boolean checks(Student s) {
-                return s.age>25;
-            }
-        });
+        info.testStudents(students, s -> s.age>25);
         System.out.println("-----------------------");
 
-        info.testStudents(students, (Student x) -> {return x.course > 2;});
+        info.testStudents(students, (Student x) -> x.course > 2);
         System.out.println("tyjtj");
         System.out.println();
     }
