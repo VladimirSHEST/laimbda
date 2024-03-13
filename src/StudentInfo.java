@@ -29,6 +29,7 @@ class Test{
 
         info.testStudents(students, (Student x) -> {return x.course > 2;});
         System.out.println("tyjtj");
+        System.out.println();
     }
 }
 interface StudentChecks{
